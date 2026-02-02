@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Hiring Filter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LinkedIn Hiring Filter</h1>
+    </header>
+
+    <section class="toggle-section">
+      <label class="toggle-label">
+        <span>Filter Active</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="filterToggle" checked>
+          <span class="slider"></span>
+        </div>
+      </label>
+    </section>
+
+    <section class="stats-section">
+      <div class="stat">
+        <span class="stat-value" id="hiddenCount">0</span>
+        <span class="stat-label">posts hidden</span>
+      </div>
+    </section>
+
+    <section class="keywords-section">
+      <label for="keywords">Hiring Keywords</label>
+      <p class="help-text">One keyword or phrase per line (case-insensitive)</p>
+      <textarea id="keywords" rows="8" placeholder="Enter keywords..."></textarea>
+      <div class="button-group">
+        <button id="saveKeywords" class="btn btn-primary">Save Keywords</button>
+        <button id="resetKeywords" class="btn btn-secondary">Reset to Default</button>
+      </div>
+    </section>
+
+    <footer>
+      <p class="status" id="status"></p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* LinkedIn Hiring Filter - Injected Styles */
+
+/* Hide non-hiring posts - using multiple properties for robustness */
+.lhf-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Optional: Add a subtle animation when posts are filtered */
+.feed-shared-update-v2,
+[data-urn^="urn:li:activity"],
+[data-id^="urn:li:activity"],
+.occludable-update,
+.scaffold-finite-scroll__content > div {
+  transition: opacity 0.2s ease-out;
+}
